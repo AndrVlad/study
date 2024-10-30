@@ -42,7 +42,7 @@
                 <div class="grid-cars">
 
                 <?php 
-                    $main_cards = get_main_card_data(4);
+                    $main_cards = get_main_card_data(2);
                     foreach($main_cards as $val):
                 ?>
 
