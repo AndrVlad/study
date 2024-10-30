@@ -1,0 +1,42 @@
+let offset = 0; // Начальное значение смещения
+const limit = 2; // Количество загружаемых карточек
+
+function loadMoreCars() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `loadmorecars.php?offset=${offset}`, true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const cars = JSON.parse(xhr.responseText);
+            if (cars.length > 0) {
+                const gridCars = document.querySelector('.grid-cars');
+                cars.forEach(car => {
+                    const carCard = `
+                        <div class="car_card">
+                            <a href="car_page.php?id=${car.car_id}">
+                                <div class="top_card">
+                                    <img src="${car.link_card_image}" alt="картинка автомобиля на карточке">
+                                </div>
+                                <div class="desc_card">
+                                    <p>${car.brand_name} ${car.car_model_name}</p>
+                                    <p>${car.release_date}</p>
+                                    <p>${car.rent_price}₽</p>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                    gridCars.insertAdjacentHTML('beforeend', carCard);
+                });
+                offset += limit; // Увеличиваем значение смещения
+            }
+        }
+    };
+    xhr.send();
+}
+
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        loadMoreCars();
+    }
+});
+
+loadMoreCars();
