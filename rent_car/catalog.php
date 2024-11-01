@@ -1,5 +1,5 @@
 <?php
-$db_host = "localhost:3310";
+$db_host = "localhost:3306";
 $db_name = "prokat";
 $db_user = "root";
 $db_pass = "";
@@ -87,14 +87,15 @@ function get_cards($class_id) {
         </header>
 
         <div class="grid-cars grid-cars-catalog" id="car-grid">
-            <!-- Карточки автомобилей будут добавлены здесь с помощью JavaScript -->
+            
         </div>
 
         <div class="next-prev-page" id="pagination">
-            <!-- Кнопки пагинации будут добавлены здесь с помощью JavaScript -->
+            
         </div>
     </div>
 </section>
+
 <script>
     const cars = <?php echo json_encode(get_cards(0)); ?>;
 
@@ -110,16 +111,17 @@ function get_cards($class_id) {
         const carsToDisplay = cars.slice(start, end);
 
         carsToDisplay.forEach(car => {
+            let car_int = parseInt(car.rent_price);
             const carCard = document.createElement('div');
             carCard.className = 'car_card car-card-catalog';
             carCard.innerHTML = `
-                <a href="car_page.php?id=${car.rent_price}">
+                <a href="car_page.php?id=${car.car_id}">
                     <div class="top_card top-card-catalog">
                         <img src="${car.link_card_image}" alt="картинка автомобиля на карточке">
                     </div>
                     <div class="desc_card-catalog">
                         <div class="card-price">
-                            <p>${car.price}₽ в день</p>
+                            <p>${car_int}₽ в день</p>
                         </div>
                         <div class="card-properties">
                             <p>${car.brand_name} ${car.car_model_name}</p>

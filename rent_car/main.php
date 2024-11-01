@@ -6,8 +6,8 @@
 
             <h1>Выбирают у нас:</h1>
             <div class="grid-container">
-            <!-- <script src="scripts/loadmorecars.js"></script> -->
-            <script src="scripts/loadmorecars-fetch.js"></script>
+            <script src="scripts/loadmorecars.js"></script>
+            <!-- <script src="scripts/loadmorecars-fetch.js"></script> -->
             <div class="grid-cars"></div>
                 
             </div>
