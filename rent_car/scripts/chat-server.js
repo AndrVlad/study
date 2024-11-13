@@ -5,8 +5,13 @@ wss.on('connection', ws => {
     ws.on('message', message => {
         console.log('Получено сообщение:', message);
         
-        // Ответ клиенту
-        ws.send(`Ваше сообщение: ${message}`);
+        wss.clients.forEach((client) => {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+                client.send(`${message}`);
+            }
+        });
+
+        
     });
 
     ws.send('Добро пожаловать в чат поддержки!');
