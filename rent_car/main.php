@@ -25,10 +25,10 @@
     <input type="text" id="chatInput" placeholder="Введите сообщение..." style="width: calc(100% - 22px);">
     <button onclick="sendMessage()" style="width: 100%; margin-top: 5px;">Отправить</button>
 </div>
-<script src="scripts/chat-server.js"></script>
+
 <script>
     // Подключение к WebSocket серверу
-    const socket = new WebSocket('ws://localhost/study/rent_car/');
+    const socket = new WebSocket('ws://localhost:8080');
 
     socket.onopen = function() {
         alert('WebSocket соединение установлено');
