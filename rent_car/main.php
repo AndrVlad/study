@@ -27,8 +27,8 @@
 </div>
 
 <script>
-    // Подключение к WebSocket серверу
-    const socket = new WebSocket('ws://localhost:8080');
+    
+    const socket = new WebSocket('ws://172.20.10.3:8080');
 
     socket.onopen = function() {
         alert('WebSocket соединение установлено');
@@ -39,7 +39,7 @@
         const newMessage = document.createElement('div');
         newMessage.textContent = `Служба поддержки: ${event.data}`;
         messageBox.appendChild(newMessage);
-        messageBox.scrollTop = messageBox.scrollHeight; // Прокрутка вниз для новых сообщений
+        messageBox.scrollTop = messageBox.scrollHeight; 
     };
 
     socket.onclose = function() {
@@ -60,8 +60,8 @@
             newMessage.textContent = `Вы: ${message}`;
             newMessage.style.fontWeight = 'bold';
             messageBox.appendChild(newMessage);
-            messageBox.scrollTop = messageBox.scrollHeight; // Прокрутка вниз для новых сообщений
-            input.value = ''; // Очистка поля ввода
+            messageBox.scrollTop = messageBox.scrollHeight; 
+            input.value = '';
         }
     }
 </script>
