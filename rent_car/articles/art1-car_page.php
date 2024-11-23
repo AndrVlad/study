@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/style-car-page.css" type="text/css">
-    <title>Прокат автомобилей в Орле</title>
-</head>
-<body>
-    <main>
-        <header id="header">
-            <a href="main.html">Прокат авто<br>57</a>
-        </header>
-        <nav>
-            <ul>
-                <li><a href = "main.html">Главная</a></li>
-                <li><a href = "catalog.html">Автомобили</a></li>
-                <li><a href = "about.html">О нас</a></li>
-                <li><a href = "contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <section class="main-content car-page-content">
+<section class="main-content car-page-content">
             <div class="car-page-container">
                 <header class="car-page-header">
                     <h1>Mercedes-Benz</h1>
@@ -76,28 +55,3 @@
                 </div>
             </div>
         </section>
-            
-        <footer>
-            <div class="footer-heading socials">
-                <p>Мы в соцсетях</p>
-                <div class="block-socials">
-                    <a href="#"><img src="resources/icons8-vk-circled-48.png"></a>
-                    <a href="#"><img src="resources/icons8-telegram-app-48.png"></a>
-                    <a href="#"><img src="resources/icons8-whatsapp-48.png"></a>
-                </div>
-            </div>
-            <div class="footer-heading address">
-                <p>Наш адрес:</p>
-                <p>пл. Мира, д.4, Орёл<br>
-                Круглосуточно, без выходных</p>
-            </div>
-            <div class="footer-heading requisites">
-                <p>Реквизиты</p>
-                <p>ИП Альтмарк 2024<br>
-                Прокат автомобилей в Орле</p>
-            </div>
-        </footer>
-    </main>
-           
-</body>
-</html>

@@ -61,10 +61,16 @@ nav ul li a {
     text-align: center;
 }
 
+nav ul li a:active {
+    text-decoration: underline;
+}
+
 nav ul li a:hover {
     background-color: #01353b;
     color: gray;
 }
+
+
 
 main {
     width: 100%;
@@ -186,7 +192,7 @@ footer .socials {
 
 #sidebar {
     background-color: #EFEFEF;
-    width: 300px;
+    width: 310px;
     height: 50%;
     margin: 0;
     border-right: 3px solid #015F6A;
@@ -217,7 +223,6 @@ footer .socials {
 #btn-class:hover {
     background-color: #09312A;
     color: white;
-    
 }
 
 .search-panel-content {
@@ -240,6 +245,10 @@ footer .socials {
 .search-panel-price {
     width: 100%;
     margin: 8px 0;
+}
+
+.search-panel-price {
+    display: block;
 }
 
 .dropdown {
@@ -286,8 +295,23 @@ footer .socials {
     background-color: white;
 }
 
-.input-year, .input-price-at, .input-price-from {
+.search-panel-price p {
+    display: block;
+}
+
+.input-year {
     width: 45px;
+    height: 22px;
+    margin: 0;
+}
+
+.inputs-price {
+    margin-left: 23px;
+    margin-top: 5px;
+}
+
+.input-price-at, .input-price-from {
+    width: 80px;
     height: 22px;
     margin: 0;
 }
@@ -649,9 +673,103 @@ footer .socials {
     font-weight: 600;
 }
 
+.auth-content {
+    margin: 5%;
+}
+
+ 
+ .auth {
+    display: block;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+} 
+ 
+.auth h1 {
+    color: #4CAF50;
+}
+ 
+.auth label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+ 
+.auth input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+ 
+.auth button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #4CAF50;
+    width: 100%;
+    font-size: 16px;
+}
+
+.auth .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg {
+    text-align: left;
+    color: red;
+}
+
+.admin-menu {
+    max-width: 400px; 
+    margin: 0 auto;   
+    padding: 20px;
+    background: #f0f0f0;
+    border: 1px solid #ccc; /
+}
+
+select {
+    width: 100%; /* Растягивает select на всю доступную ширину */
+    padding: 8px; /* Добавляет внутренний отступ контента внутри select */
+    margin: 5px 0; /* Устанавливает отступы сверху и снизу */
+    box-sizing: border-box; /* Учитывает padding и border в общей ширине элемента */
+}
+
+textarea {
+    width: 100%;
+    padding: 8px; /* Добавляет внутренний отступ контента внутри select */
+    margin: 5px 0; /* Устанавливает отступы сверху и снизу */
+    box-sizing: border-box; /* Учитывает padding и border в общей ширине элемента */
+}
+
 @media screen and (max-width: 700px) {
     footer {
         height: 61vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid-cars {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 57px;
     }
 }
 
@@ -660,6 +778,110 @@ footer .socials {
         margin: auto 4%;
     }
 } 
+
+@media screen and (max-width: 1220px) {
+    .wrap-car-image-spec {
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: none;
+        min-width: 100%;
+    }
+
+    .car-images {
+        height: 550px;
+        position: relative;
+    }
+
+    .choosen-car-image {
+        margin: 3% 5%;
+        height: 370px;
+    }
+
+    .gallery-car-images {
+        margin-top: 2px;
+        margin-left: 5%;
+        padding: 0;
+    }
+
+    .chosen-image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+    .car-description{
+        margin-top: 20px;
+    }
+
+    .header-car-spec {
+        padding-left: 25px;
+    }
+    
+    .car-spec-values {
+        padding-right: 25px;
+    }
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+
+
+.car-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.company-info p, a:hover {
+    color:#555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
 
 
 

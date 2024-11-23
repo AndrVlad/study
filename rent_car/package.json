@@ -1,0 +1,12 @@
+{
+  "name": "rent_car",
+  "version": "1.0.0",
+  "description": "fdsfЭто файл README\r fsdfsdfsdsdf\r dfsfsd\r fsdjkfhsdjkf",
+  "main": "js-scr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
